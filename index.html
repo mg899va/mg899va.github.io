@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="长春最新疫情数据实时查询平台，提供长春市新增确诊病例、无症状感染者、中高风险区域及核酸检测点分布等权威防疫资讯。">
+    <meta name="keywords" content="长春,长春疫情,长春最新疫情,长春疫情动态,长春封控,长春核酸检测">
+    <title>长春最新疫情-长春市权威防疫资讯与实时数据发布平台</title>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #457b9d;
+            --bg-color: #f1faee;
+            --card-bg: #ffffff;
+            --text-main: #1d3557;
+            --text-sub: #6c757d;
+            --border-color: #e9ecef;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-badge {
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .status-badge.normal { background-color: #d1e7dd; color: #0f5132; }
+        .status-badge.warning { background-color: #fff3cd; color: #664d03; }
+        .status-badge.danger { background-color: #f8d7da; color: #842029; }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-sub);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Data Grid */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .data-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .data-card.highlight {
+            border-top-color: var(--primary-color);
+        }
+
+        .data-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .data-label {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* List Styles */
+        .info-list {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .info-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-content h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .info-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .tag.high { background-color: #f8d7da; color: #842029; }
+        .tag.medium { background-color: #fff3cd; color: #664d03; }
+        .tag.low { background-color: #d1e7dd; color: #0f5132; }
+
+        .update-time {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Guidance & FAQ */
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .guide-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #adb5bd;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                font-size: 0.85rem;
+                gap: 15px;
+            }
+
+            .data-value {
+                font-size: 1.5rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .info-item .tag {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            长春防疫通
+        </div>
+        <div class="status-badge normal" id="statusBadge">当前风险等级：低</div>
+        <nav class="nav-links">
+            <a href="#" class="active">实时数据</a>
+            <a href="#">区域管控</a>
+            <a href="#">核酸检测</a>
+            <a href="#">政策解读</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+    <section class="hero">
+        <h1>长春最新疫情动态</h1>
+        <p>数据来源：长春市卫生健康委员会 | 更新时间：每日 10:00</p>
+    </section>
+
+    <!-- 核心数据展示区 -->
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">核心疫情数据</h2>
+        </div>
+        <div class="data-grid">
+            <div class="data-card highlight">
+                <div class="data-value" id="newCases">0</div>
+                <div class="data-label">新增确诊病例</div>
+            </div>
+            <div class="data-card">
+                <div class="data-value" id="newAsymptomatic">0</div>
+                <div class="data-label">新增无症状感染者</div>
+            </div>
+            <div class="data-card">
+                <div class="data-value" id="totalCases">0</div>
+                <div class="data-label">累计确诊病例</div>
+            </div>
+            <div class="data-card">
+                <div class="data-value" id="totalCured">0</div>
+                <div class="data-label">累计治愈出院</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 区域管控信息 -->
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">区域风险等级调整</h2>
+            <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看完整地图 &rarr;</a>
+        </div>
+        <div class="info-list">
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>全市范围内</h3>
+                    <p>除中高风险区外，全域常态化防控。</p>
+                </div>
+                <span class="tag low">低风险</span>
+                <span class="update-time">2023-10-27</span>
+            </div>
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>朝阳区某社区</h3>
+                    <p>因关联病例排查，临时管控至 10月28日。</p>
+                </div>
+                <span class="tag medium">中风险</span>
+                <span class="update-time">2023-10-27</span>
+            </div>
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>南关区某街道</h3>
+                    <p>无新增病例，持续常态化管理。</p>
+                </div>
+                <span class="tag low">低风险</span>
+                <span class="update-time">2023-10-26</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 防疫指南 -->
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">市民防疫操作指南</h2>
+        </div>
+        <div class="guidance-grid">
+            <article class="guide-card">
+                <h3>🛡️ 公共场所防护</h3>
+                <ul class="guide-list">
+                    <li>进入商场、超市、医院等公共场所，请主动配合查验健康码。</li>
+                    <li>乘坐公共交通工具时，请全程佩戴口罩，尽量保持安全距离。</li>
+                    <li>保持手部卫生，避免用未清洁的手触摸口、眼、鼻。</li>
+                </ul>
+            </article>
+            <article class="guide-card">
+                <h3>🏥 核酸检测须知</h3>
+                <ul class="guide-list">
+                    <li>请关注社区通知，按指定时间段前往指定点位进行检测。</li>
+                    <li>检测时请佩戴口罩，保持1米线距离，有序排队。</li>
+                    <li>采样完成后，请立即离开采样点，不聚集、不交谈。</li>
+                </ul>
+            </article>
+            <article class="guide-card">
+                <h3>📱 症状自查与就医</h3>
+                <ul class="guide-list">
+                    <li>出现发热、干咳、乏力等症状，建议先进行抗原自测。</li>
+                    <li>如结果呈阳性或症状加重，请佩戴口罩前往发热门诊就诊。</li>
+                    <li>未接种疫苗的老年人，建议及时接种加强针。</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">常见问题解答</h2>
+        </div>
+        <div class="info-list">
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>长春目前还有封控区吗？</h3>
+                    <p>根据最新发布，长春市除个别临时管控区域外，全域已恢复正常生产生活秩序。</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>外地返长需要隔离吗？</h3>
+                    <p>目前非重点地区人员返长无需隔离，但建议主动进行一次核酸检测，并做好个人健康监测。</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-content">
+                    <h3>长春疫苗接种点在哪里？</h3>
+                    <p>各社区卫生服务中心及指定医疗机构均设有接种点，建议提前电话咨询。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2023 长春防疫通 | 本页面信息仅供参考，具体政策请以官方最新发布为准</p>
+        <p class="disclaimer">
+            免责声明：本网站所展示的疫情数据来源于公开统计渠道，旨在为公众提供便捷的信息查询服务。如遇数据更新延迟，请以长春市卫生健康委员会官方通报为准。我们不承担因使用本网站信息而产生的任何法律责任。
+        </p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+</body>
+</html>
