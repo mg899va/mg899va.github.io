@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YP牢记网站域名避免丢失 - YP官方网站提供最新Y服务资讯、用户指南及域名安全提示，帮助您准确访问并保护重要网络资源。">
+    <meta name="keywords" content="YP牢记网站域名避免丢失,YP官网,域名安全,YP服务">
+    <title>YP牢记网站域名避免丢失 - YP官方首页与安全访问指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #1e293b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-login {
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .btn-login:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .domain-display {
+            display: inline-flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .domain-label {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            margin-right: 1rem;
+        }
+
+        .domain-name {
+            font-family: monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Warning Section */
+        .warning-section {
+            padding: 3rem 0;
+            background-color: #fff1f2;
+        }
+
+        .warning-card {
+            background-color: white;
+            border: 1px solid #fecdd3;
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .warning-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .warning-content h3 {
+            color: #991b1b;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-content p {
+            color: #7f1d1d;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-sub);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #eff6ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Domain Management Tips */
+        .tips-section {
+            background-color: white;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tips-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tip-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .tip-num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--border-color);
+            line-height: 1;
+        }
+
+        .tip-content h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .tip-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 4rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--text-sub);
+            padding-left: 1.5rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item.active .faq-question::before {
+            content: "+";
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .domain-display {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .domain-label {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                <span>YP</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">服务介绍</a></li>
+                    <li><a href="#tips">安全指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-login">立即访问</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>YP牢记网站域名避免丢失</h1>
+                <p>请务必收藏并牢记YP官方网站的正确地址，确保您能安全、稳定地访问我们的核心服务与最新资讯。</p>
+                
+                <div class="domain-display">
+                    <span class="domain-label">官方网站地址：</span>
+                    <span class="domain-name">www.yp.com</span>
+                </div>
+
+                <a href="#" class="btn-primary">进入官网首页</a>
+            </div>
+        </section>
+
+        <section class="warning-section">
+            <div class="container">
+                <div class="warning-card">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-content">
+                        <h3>域名变更风险提示</h3>
+                        <p>互联网环境复杂，存在大量仿冒或钓鱼网站。请严格以本页面显示的域名为准。任何声称是YP官方但域名不匹配的链接均非官方网站，请勿输入密码或进行转账操作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>YP核心服务概览</h2>
+                    <p>全方位解决您的需求，提供专业、高效的一站式体验</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <h3>在线文档与资源</h3>
+                            <p>在官方网站首页，您可以找到最新的产品文档、API接口说明及操作手册，确保信息的准确性和时效性。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3>实时状态监控</h3>
+                            <p>通过官方入口，查看YP服务器的实时运行状态、系统维护公告及负载情况，合理安排您的使用时间。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3>账户安全保障</h3>
+                            <p>官方登录页面提供双重验证功能，防止账号被盗用。请务必通过正确域名进入，切勿轻信不明链接。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>如何安全收藏YP官网</h2>
+                    <p>为了防止域名丢失或误入钓鱼网站，请参考以下安全收藏建议</p>
+                </div>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <span class="tip-num">01</span>
+                        <div class="tip-content">
+                            <h4>手动输入地址</h4>
+                            <p>不要点击来源不明的链接。请直接在浏览器地址栏输入 "www.yp.com" 进行访问。</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-num">02</span>
+                        <div class="tip-content">
+                            <h4>添加浏览器书签</h4>
+                            <p>访问官网后，按 Ctrl+D (Windows) 或 Cmd+D (Mac) 添加到书签，并重命名为“YP官方网站”。</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-num">03</span>
+                        <div class="tip-content">
+                            <h4>关注官方通知</h4>
+                            <p>YP不会通过短信或非官方邮箱发送域名变更通知。如有变动，请以本页公告为准。</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-num">04</span>
+                        <div class="tip-content">
+                            <h4>启用HTTPS验证</h4>
+                            <p>确认浏览器地址栏显示小锁图标，确保连接加密，防止中间人攻击窃取域名信息。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于域名访问与官方认证的常见疑问</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">YP官网的域名是什么？</div>
+                        <div class="faq-answer">YP官方网站的域名是 www.yp.com，请以该地址为准进行访问。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">为什么我无法打开YP官网？</div>
+                        <div class="faq-answer">首先请检查您输入的域名是否正确，其次确认网络连接正常。如长期无法访问，可能是由于网络防火墙限制或DNS解析问题。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何确认当前访问的是YP官方页面？</div>
+                        <div class="faq-answer">请查看浏览器地址栏，确保完全匹配 "www.yp.com"（不包含其他后缀或子域名）。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于YP</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源中心</h4>
+                    <ul>
+                        <li><a href="#">帮助文档</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="#">开发者社区</a></li>
+                        <li><a href="#">下载中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律条款</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务协议</a></li>
+                        <li><a href="#">安全声明</a></li>
+                        <li><a href="#">版权信息</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>官方提醒</h4>
+                    <ul>
+                        <li><a href="#">域名安全指南</a></li>
+                        <li><a href="#">防诈骗公告</a></li>
+                        <li><a href="#">系统公告</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 YP Inc. All Rights Reserved. YP牢记网站域名避免丢失 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
