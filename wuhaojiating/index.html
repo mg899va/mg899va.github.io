@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="五好家庭材料是创建文明家庭、评选五好家庭的重要依据。本站提供标准评选表、申报材料模板、事迹材料写作指南及评分细则，帮助用户高效准备申请材料。">
+    <meta name="keywords" content="五好家庭材料, 评选标准, 事迹材料, 申请表, 文明家庭">
+    <title>五好家庭材料-标准评选表、事迹材料模板与申报指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c6e49; /* 沉稳的绿色，代表和谐与文明 */
+            --primary-light: #e8f5e9;
+            --accent-color: #d4a017; /* 温暖的黄色，代表荣誉 */
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #1e5236;
+            color: white;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1b5e20 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        /* 核心概念区 */
+        .concepts {
+            background-color: var(--bg-card);
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .concept-card {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-light);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .concept-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .concept-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 材料模板区 */
+        .materials {
+            background-color: var(--bg-body);
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .material-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-preview {
+            height: 160px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            position: relative;
+        }
+
+        .material-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .material-preview::before {
+            content: '📄';
+            font-size: 40px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .material-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-tag {
+            font-size: 12px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .material-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .material-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #f0f0f0;
+            color: var(--text-main);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #e0e0e0;
+            color: var(--primary-color);
+        }
+
+        /* 评分标准区 */
+        .criteria {
+            background-color: var(--bg-card);
+        }
+
+        .criteria-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .criteria-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .criterion-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .score-badge {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .criterion-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .criterion-text p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .example-box {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .example-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .example-box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .example-box li {
+            margin-bottom: 8px;
+        }
+
+        /* 写作指南区 */
+        .guide {
+            background-color: var(--bg-body);
+        }
+
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .guide-step {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .guide-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(44, 110, 73, 0.1);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .guide-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .guide-step p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* 常见问题 */
+        .faq {
+            background-color: var(--bg-card);
+        }
+
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        .faq-item {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #fff;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px; /* 近似高度 */
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2b2b2b;
+            color: #ccc;
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+
+            .criteria-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🏠</span> 五好家庭材料
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#concepts" class="active">评选标准</a></li>
+                    <li><a href="#materials">材料模板</a></li>
+                    <li><a href="#guide">写作指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#materials" class="cta-button">下载模板</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>创建文明家庭，弘扬优良家风</h1>
+            <p>提供专业的五好家庭评选标准、申报材料模板及事迹材料写作指南，助您高效完成申请，展现家庭风采。</p>
+            <div class="hero-tags">
+                <span class="tag">孝老爱亲</span>
+                <span class="tag">邻里和睦</span>
+                <span class="tag">教子有方</span>
+                <span class="tag">勤劳致富</span>
+                <span class="tag">移风易俗</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="concepts" class="concepts">
+        <div class="container">
+            <div class="section-header">
+                <h2>什么是“五好家庭”？</h2>
+                <p>“五好家庭”是中国基层群众性精神文明创建活动的重要载体，旨在树立家庭文明新风。</p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="icon-box">孝</div>
+                    <h3>孝老爱亲</h3>
+                    <p>尊敬长辈，赡养父母，关爱配偶，教育子女，家庭成员间互敬互爱，家庭氛围温馨和谐。</p>
+                </div>
+                <div class="concept-card">
+                    <div class="icon-box">睦</div>
+                    <h3>邻里和睦</h3>
+                    <p>与邻居相处融洽，互帮互助，遵守社区公约，不搬弄是非，共同维护社区环境。</p>
+                </div>
+                <div class="concept-card">
+                    <div class="icon-box">勤</div>
+                    <h3>勤劳致富</h3>
+                    <p>家庭成员通过诚实劳动和合法经营创造美好生活，生活作风简朴，不铺张浪费。</p>
+                </div>
+                <div class="concept-card">
+                    <div class="icon-box">教</div>
+                    <h3>教子有方</h3>
+                    <p>重视子女思想品德和良好习惯的培养，注重言传身教，引导子女成为社会有用之才。</p>
+                </div>
+                <div class="concept-card">
+                    <div class="icon-box">文</div>
+                    <h3>移风易俗</h3>
+                    <p>破除封建迷信，反对大操大办，倡导婚事新办、丧事简办，崇尚科学文明的生活方式。</p>
+                </div>
+                <div class="concept-card">
+                    <div class="icon-box">法</div>
+                    <h3>遵纪守法</h3>
+                    <p>家庭成员无违法违纪行为，自觉遵守法律法规和村规民约，维护社会公德。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materials" class="materials">
+        <div class="container">
+            <div class="section-header">
+                <h2>常用材料模板下载</h2>
+                <p>根据评选要求，准备相应的表格和事迹材料是申请成功的关键。</p>
+            </div>
+            <div class="material-grid">
+                <!-- 模板卡片 1 -->
+                <div class="material-card">
+                    <div class="material-preview">
+                        <img src="https://picsum.photos/seed/family1/400/250" alt="五好家庭申请表预览">
+                    </div>
+                    <div class="material-content">
+                        <span class="material-tag">官方表格</span>
+                        <h3>五好家庭申报表</h3>
+                        <p>包含家庭基本情况、主要事迹简介及推荐意见栏的标准格式模板。</p>
+                        <a href="#" class="download-btn">下载表格</a>
+                    </div>
+                </div>
+
+                <!-- 模板卡片 2 -->
+                <div class="material-card">
+                    <div class="material-preview">
+                        <img src="https://picsum.photos/seed/family2/400/250" alt="事迹材料模板预览">
+                    </div>
+                    <div class="material-content">
+                        <span class="material-tag">写作范本</span>
+                        <h3>事迹材料写作模板</h3>
+                        <p>结构清晰的范文，涵盖家庭背景、具体事迹、荣誉奖励及社会评价。</p>
+                        <a href="#" class="download-btn">查看范文</a>
+                    </div>
+                </div>
+
+                <!-- 模板卡片 3 -->
+                <div class="material-card">
+                    <div class="material-preview">
+                        <img src="https://picsum.photos/seed/family3/400/250" alt="推荐意见函预览">
+                    </div>
+                    <div class="material-content">
+                        <span class="material-tag">证明文件</span>
+                        <h3>单位/社区推荐意见函</h3>
+                        <p>规范的单位推荐意见模板，包含推荐理由及审核盖章区域。</p>
+                        <a href="#" class="download-btn">下载模板</a>
+                    </div>
+                </div>
+
+                <!-- 模板卡片 4 -->
+                <div class="material-card">
+                    <div class="material-preview">
+                        <img src="https://picsum.photos/seed/family4/400/250" alt="评分细则预览">
+                    </div>
+                    <div class="material-content">
+                        <span class="material-tag">评分参考</span>
+                        <h3>评分细则对照表</h3>
+                        <p>详细列出五大类别的具体评分标准和加分项，方便自查。</p>
+                        <a href="#" class="download-btn">查看细则</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>事迹材料写作指南</h2>
+                <p>如何将家庭的闪光点转化为有说服力的文字？掌握这几个要点。</p>
+            </div>
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">01</div>
+                    <h3>标题要鲜明，主题要突出</h3>
+                    <p>标题应直接反映家庭的核心特点或荣誉称号，例如《平凡家庭的“孝”字当头》、《爱岗敬业的“双职工”之家》。避免使用过于笼统的标题，如《我的家庭》。</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">02</div>
+                    <h3>结构清晰，逻辑严密</h3>
+                    <p>通常采用“总-分-总”结构。开头简要介绍家庭概况；中间部分分点叙述“五好”事迹，最好结合具体事例（如照顾患病长辈、邻里互助的具体事例）；结尾总结升华，表达对未来的展望。</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">03</div>
+                    <h3>用事实说话，拒绝空洞</h3>
+                    <p>避免堆砌形容词。多用数字、具体行为来体现。例如，与其说“他们非常勤劳”，不如写“全家老小利用节假日参与社区志愿服务20余次”或“丈夫常年坚持为独居老人送饭”。</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">04</div>
+                    <h3>突出重点，详略得当</h3>
+                    <p>根据“五好”标准，重点描写与评选维度最相关的内容。如果家庭在“邻里和睦”方面表现突出，则多着笔墨；一般性家庭事务可一笔带过。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="criteria" class="criteria">
+        <div class="container">
+            <div class="section-header">
+                <h2>评分标准参考</h2>
+                <p>了解评分维度，有助于在准备材料时更有针对性。</p>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-list">
+                    <div class="criterion-item">
+                        <div class="score-badge">30</div>
+                        <div class="criterion-text">
+                            <h4>思想道德与遵纪守法</h4>
+                            <p>家庭成员政治立场坚定，无违法违纪记录，自觉遵守社会公德。</p>
+                        </div>
+                    </div>
+                    <div class="criterion-item">
+                        <div class="score-badge">25</div>
+                        <div class="criterion-text">
+                            <h4>孝老爱亲与家庭美德</h4>
+                            <p>家庭关系和谐，对长辈孝顺，夫妻互敬，抚育子女有方。</p>
+                        </div>
+                    </div>
+                    <div class="criterion-item">
+                        <div class="score-badge">20</div>
+                        <div class="criterion-text">
+                            <h4>邻里关系与移风易俗</h4>
+                            <p>邻里关系融洽，乐于助人，婚丧嫁娶简办，无封建迷信活动。</p>
+                        </div>
+                    </div>
+                    <div class="criterion-item">
+                        <div class="score-badge">25</div>
+                        <div class="criterion-text">
+                            <h4>勤劳致富与生活方式</h4>
+                            <p>通过劳动创造财富，生活作风健康，积极参与社区建设。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <h3>评选注意事项</h3>
+                    <ul>
+                        <li><strong>真实性：</strong>所有事迹必须真实可靠，经得起核实。</li>
+                        <li><strong>时效性：</strong>主要事迹应发生在近两年内，或具有持续影响。</li>
+                        <li><strong>代表性：</strong>事迹应具有典型性，能代表某一类家庭风貌。</li>
+                        <li><strong>材料规范：</strong>表格填写工整，附件齐全（如获奖证书复印件）。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>关于五好家庭评选及材料准备的相关疑问。</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">五好家庭评选一年几次？</div>
+                    <div class="faq-answer">
+                        <p>通常由各省、市、县（区）、街道（乡镇）、社区（村）分级组织评选。一般一年评选一次，具体时间请关注当地社区或村委会的通知。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">材料需要手写还是打印？</div>
+                    <div class="faq-answer">
+                        <p>申报表通常要求统一打印并手写签名（部分简化流程可能允许打印签名），事迹材料一般要求打印，但需加盖手印或亲笔签名确认。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如果家庭有特殊情况（如离异）可以参评吗？</div>
+                    <div class="faq-answer">
+                        <p>可以。只要家庭主要成员关系和睦，且符合“五好”标准（如教子有方、邻里和睦等），依然可以参评。重点在于展示家庭的正面形象。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">除了材料，还需要准备什么？</div>
+                    <div class="faq-answer">
+                        <p>除了书面材料，通常还需要准备家庭生活照片（如全家福、参与公益活动照片）作为附件，以图文并茂的形式展示家庭风貌。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>本站致力于为广大家庭提供创建“五好家庭”的辅助资料与指导服务，弘扬中华民族传统家庭美德。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">评选标准</a></li>
+                        <li><a href="#">申请表格</a></li>
+                        <li><a href="#">事迹范文</a></li>
+                        <li><a href="#">政策法规</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关服务</h4>
+                    <ul>
+                        <li><a href="#">社区申报指南</a></li>
+                        <li><a href="#">村规民约下载</a></li>
+                        <li><a href="#">家风家训征集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <p>如有材料获取或评选疑问，请联系当地基层妇联或社区居委会。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 五好家庭材料服务中心. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                }
+            });
+        });
+    </script>
+</body>
+                          </html>
