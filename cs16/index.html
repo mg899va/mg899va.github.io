@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cs1.6武器皮肤下载 - 热门经典皮肤库与安装指南</title>
+    <meta name="description" content="提供正版、安全的cs1.6武器皮肤下载资源。包含AK-47、AWP等经典武器皮肤包，详细说明安装方法与版本兼容性，助您重温CS1.6的视觉盛宴。">
+    <meta name="keywords" content="cs1.6武器皮肤下载,CS1.6皮肤包,AK47皮肤,AWP皮肤,CS1.6模型下载,CS1.6材质替换">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ffc107;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #ccc;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 12px;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            width: 200px;
+        }
+
+        .search-box button {
+            border: none;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0 12px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c0e0e 0%, #4a1a1a 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .download-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Category Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        /* Installation Guide */
+        .guide-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            border: 1px solid #eee;
+        }
+
+        .guide-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .step h4 {
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid #f9f9f9;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: #999;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                order: 3;
+            }
+
+            nav ul {
+                justify-content: center;
+                font-size: 0.85rem;
+                gap: 15px;
+            }
+
+            .search-box {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">CS<span>1.6</span> Skin</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新发布</a></li>
+                    <li><a href="#">武器库</a></li>
+                    <li><a href="#">安装教程</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索皮肤名称...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>重温经典，焕新视觉</h1>
+            <p>海量高品质 CS1.6 武器皮肤资源，涵盖 AK-47、AWP、M4A1 等经典武器模型与材质替换。支持 1.6 v34 版本，一键下载，轻松美化您的游戏体验。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>500+</strong>
+                    <span>精选皮肤</span>
+                </div>
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>安全无毒</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Free</strong>
+                    <span>永久免费</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active">全部</button>
+                <button class="tab-btn">步枪</button>
+                <button class="tab-btn">手枪</button>
+                <button class="tab-btn">狙击枪</button>
+                <button class="tab-btn">匕首</button>
+                <button class="tab-btn">手雷/烟雾</button>
+            </div>
+
+            <!-- Featured Section -->
+            <section class="section-header">
+                <h2 class="section-title">本周热门推荐</h2>
+                <a href="#" class="view-all">查看全部 &rarr;</a>
+            </section>
+
+            <div class="grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="badge">Top 1</span>
+                        <img src="https://picsum.photos/seed/ak47/400/300" alt="AK-47 钻石幻影皮肤">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AK-47 钻石幻影</h3>
+                        <p class="card-desc">极致奢华的钻石纹理设计，枪身采用金属拉丝工艺，射击时火花四溅，视觉效果极佳的替换模型。</p>
+                        <div class="card-footer">
+                            <span>更新: 2023-10-25</span>
+                            <a href="#" class="download-btn">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                                下载
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="badge">New</span>
+                        <img src="https://picsum.photos/seed/aug/400/300" alt="AWP 火焰风暴皮肤">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AWP 火焰风暴</h3>
+                        <p class="card-desc">暗红色与火焰橙色交织的霸气设计，还原度高，枪身细节丰富，让狙击枪在战场中更显威慑力。</p>
+                        <div class="card-footer">
+                            <span>更新: 2023-10-24</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/m4a1/400/300" alt="M4A1 黑色幽灵皮肤">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">M4A1 黑色幽灵</h3>
+                        <p class="card-desc">全黑色哑光涂装，配合暗夜幽灵贴纸，低调而不失神秘感，适合喜欢隐蔽作战的玩家。</p>
+                        <div class="card-footer">
+                            <span>更新: 2023-10-23</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="badge">Hot</span>
+                        <img src="https://picsum.photos/seed/deagle/400/300" alt="沙漠之鹰 霓虹皮肤">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">沙漠之鹰 霓虹</h3>
+                        <p class="card-desc">赛博朋克风格的霓虹配色，枪身带有发光效果（需配合特定光影插件），手感极佳。</p>
+                        <div class="card-footer">
+                            <span>更新: 2023-10-22</span>
+                            <a href="#" class="download-btn">下载</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Categories Section -->
+            <section class="section-header" style="margin-top: 50px;">
+                <h2 class="section-title">武器分类</h2>
+            </section>
+
+            <div class="grid">
+                <article class="card" style="padding: 20px; text-align: center; height: auto;">
+                    <div class="card-image" style="height: 120px;">
+                        <img src="https://picsum.photos/seed/rifles/400/300" alt="步枪皮肤">
+                    </div>
+                    <h3 class="card-title" style="margin-top: 10px;">步枪系列</h3>
+                    <p class="card-desc">AK-47, M4A1, Galil, Famas</p>
+                </article>
+                <article class="card" style="padding: 20px; text-align: center; height: auto;">
+                    <div class="card-image" style="height: 120px;">
+                        <img src="https://picsum.photos/seed/snipers/400/300" alt="狙击枪皮肤">
+                    </div>
+                    <h3 class="card-title" style="margin-top: 10px;">狙击枪系列</h3>
+                    <p class="card-desc">AWP, Scout, G3SG1</p>
+                </article>
+                <article class="card" style="padding: 20px; text-align: center; height: auto;">
+                    <div class="card-image" style="height: 120px;">
+                        <img src="https://picsum.photos/seed/pistols/400/300" alt="手枪皮肤">
+                    </div>
+                    <h3 class="card-title" style="margin-top: 10px;">手枪系列</h3>
+                    <p class="card-desc">USP, Glock, Deagle, P90</p>
+                </article>
+                <article class="card" style="padding: 20px; text-align: center; height: auto;">
+                    <div class="card-image" style="height: 120px;">
+                        <img src="https://picsum.photos/seed/knives/400/300" alt="匕首皮肤">
+                    </div>
+                    <h3 class="card-title" style="margin-top: 10px;">近战武器</h3>
+                    <p class="card-desc">刀类模型替换与贴图</p>
+                </article>
+            </div>
+
+            <!-- Installation Guide -->
+            <section class="guide-section">
+                <div class="section-header" style="border: none; margin-bottom: 20px;">
+                    <h2 class="section-title">CS1.6 皮肤安装教程</h2>
+                </div>
+                <p style="color: #666;">下载皮肤包后，请按照以下步骤将其放入游戏目录，即可在游戏中生效。</p>
+                <div class="guide-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h4>解压文件</h4>
+                        <p>使用 WinRAR 或 7-Zip 解压下载的压缩包。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h4>找到游戏目录</h4>
+                        <p>打开安装目录，找到 <code>cstrike</code> 文件夹。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h4>替换模型</h4>
+                        <p>将解压出的 <code>models</code> 或 <code>materials</code> 文件夹复制到 <code>cstrike</code> 目录下，选择“覆盖”。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h4>刷新游戏</h4>
+                        <p>启动 CS1.6，进入游戏设置中关闭硬件加速或重置模型，皮肤即可显示。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="section-header" style="margin-top: 50px;">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+            </section>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">下载的皮肤包太大怎么办？</div>
+                    <div class="faq-answer">部分皮肤包包含完整的模型和贴图文件，体积较大属于正常现象。建议使用迅雷或IDM下载，速度更快。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">安装后皮肤没有显示？</div>
+                    <div class="faq-answer">请检查是否正确覆盖了 <code>cstrike/models</code> 或 <code>cstrike/materials</code> 目录。部分皮肤需要开启游戏内的 <strong>模型替换</strong> 功能，或重新启动游戏。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这些皮肤是免费的吗？</div>
+                    <div class="faq-answer">是的，本站提供的所有资源均为玩家自制分享，完全免费，仅供个人学习交流使用。</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>CS1.6 Skin</h5>
+                <p style="font-size: 0.9rem; line-height: 1.6;">专注提供高品质的 CS 1.6 游戏皮肤资源，致力于还原经典，美化游戏体验。</p>
+            </div>
+            <div class="footer-col">
+                <h5>快速链接</h5>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>热门武器</h5>
+                <ul>
+                    <li><a href="#">AK-47 皮肤</a></li>
+                    <li><a href="#">AWP 皮肤</a></li>
+                    <li><a href="#">M4A1 皮肤</a></li>
+                    <li><a href="#">Deagle 皮肤</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>联系支持</h5>
+                <ul>
+                    <li>QQ群: 123456789</li>
+                    <li>Email: support@cs16skin.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 CS1.6 Skin Resource. All Rights Reserved. 本站资源仅供学习交流使用。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Tab Switching Logic (Visual only)
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+                                  </html>
